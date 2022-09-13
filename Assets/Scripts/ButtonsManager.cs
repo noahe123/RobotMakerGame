@@ -66,6 +66,8 @@ public class ButtonsManager : MonoBehaviour
 		public string Description;
 		public Sprite Icon;
 		public Roundedness MyRoundedness;
+		public Roundedness RoundedSelect;
+		public Roundedness RoundedDefault;
 		public bool finalButton;
 		public bool selected;
 
@@ -230,17 +232,21 @@ public class ButtonsManager : MonoBehaviour
 						buttonLocation = new Vector4(i, w, 0, 0);
 
 						//make the button at the top of the column rounded
-						mB.MyRoundedness = Roundedness.Top;
+						mB.RoundedDefault = Roundedness.None;
+						mB.RoundedSelect = Roundedness.None;
 
 						break;
 					}
                     else if (w == regularButtonCount - 1) //make the button at the bottom of the column rounded
                     {
-						allButtons[i, w, 0, 0].MyRoundedness = Roundedness.BottomRight;
+						allButtons[i, w, 0, 0].RoundedDefault = Roundedness.None;
+						allButtons[i, w, 0, 0].RoundedSelect = Roundedness.None;
+
 					}
-					else if (w != regularButtonCount - 1)
+					else if (w != regularButtonCount - 1) //make the buttons in between the top and bottom of the column flat
 					{
-						allButtons[i, w, 0, 0].MyRoundedness = Roundedness.None;
+						allButtons[i, w, 0, 0].RoundedDefault = Roundedness.None;
+						allButtons[i, w, 0, 0].RoundedSelect = Roundedness.None;
 					}
 				}
 				//Debug.Log("DefineButtonData()");
@@ -258,7 +264,7 @@ public class ButtonsManager : MonoBehaviour
 					for (int w = j; w >= 0; w--)
 					{
 						//is the slot empty?
-						if (allButtons[i, j, w, 0].Description == null)
+						if (allButtons[i, j, w, 0].Description == null || allButtons[i, j, w, 0].Description == "")
 						{
 							//define the button data at this location!
 							mB = allButtons[i, j, w, 0];
@@ -266,17 +272,20 @@ public class ButtonsManager : MonoBehaviour
 							buttonLocation = new Vector4(i, j, w, 0);
 
 							//make the button at the top of the column rounded
-							mB.MyRoundedness = Roundedness.TopRight;
+							mB.RoundedDefault = Roundedness.None;
+							mB.RoundedSelect = Roundedness.None;
 
 							break;
 						}
 						else if (w == j) //make the button at the bottom of the column rounded
 						{
-							allButtons[i, j, w, 0].MyRoundedness = Roundedness.BottomRight;
+							allButtons[i, j, w, 0].RoundedDefault = Roundedness.None;
+							allButtons[i, j, w, 0].RoundedSelect = Roundedness.None;
 						}
-						else if (w != j)
-                        {
-							allButtons[i, j, w, 0].MyRoundedness = Roundedness.None;
+						else if (w != j) //make the buttons in between the top and bottom of the column flat
+						{
+							allButtons[i, j, w, 0].RoundedDefault = Roundedness.None;
+							allButtons[i, j, w, 0].RoundedSelect = Roundedness.None;
 						}
 					}
 				}
@@ -292,7 +301,7 @@ public class ButtonsManager : MonoBehaviour
 						for (int w = k; w >= 0; w--)
 						{
 							//is the slot empty?
-							if (allButtons[i, j, k, w].Description == null)
+							if (allButtons[i, j, k, w].Description == null || allButtons[i, j, k, w].Description == "")
 							{
 								//define the button data at this location!
 								mB = allButtons[i, j, k, w];
@@ -300,17 +309,21 @@ public class ButtonsManager : MonoBehaviour
 								buttonLocation = new Vector4(i, j, k, w);
 
 								//make the button at the top of the column rounded
-								mB.MyRoundedness = Roundedness.TopRight;
+								mB.RoundedDefault = Roundedness.None;
+								mB.RoundedSelect = Roundedness.None;
 
 								break;
 							}
 							else if (w == k) //make the button at the bottom of the column rounded
 							{
-								allButtons[i, j, k, w].MyRoundedness = Roundedness.BottomLeft;
+								allButtons[i, j, k, w].RoundedDefault = Roundedness.None;
+								allButtons[i, j, k, w].RoundedSelect = Roundedness.None;
 							}
-							else if (w != k)
+							else if (w != k) //make the buttons in between the top and bottom of the column flat
 							{
-								allButtons[i, j, k, w].MyRoundedness = Roundedness.None;
+								allButtons[i, j, k, w].RoundedDefault = Roundedness.None;
+								allButtons[i, j, k, w].RoundedSelect = Roundedness.None;
+
 							}
 						}
 					}
@@ -347,6 +360,8 @@ public class ButtonsManager : MonoBehaviour
         {
 			mB.finalButton = true;
 		}
+
+		mB.MyRoundedness = mB.RoundedDefault;
 
 		//set the buttonLocation index of allButtons to mB
 		allButtons[(int)buttonLocation.x, (int)buttonLocation.y, (int)buttonLocation.z, (int)buttonLocation.w] = mB;
@@ -447,10 +462,15 @@ public class ButtonsManager : MonoBehaviour
 		//mark button as selected
 		allButtons[pi, pj, pk, pm].selected = true;
 
+		allButtons[pi, pj, pk, pm].MyRoundedness = mB.RoundedSelect;
+
 		if (mB.finalButton)
         {
 			//collapse UI
 			SpawnButtonColumn(0, 0, 0, 0);
+
+			FindObjectOfType<SoundManager>().Play("Spawn");
+
 
 			//button functionality
 			GameEvents.current.SampleEvent();
@@ -458,6 +478,8 @@ public class ButtonsManager : MonoBehaviour
 			return;
         }
 		SpawnButtonColumn(pi, pj, pk, pm);
+
+		FindObjectOfType<SoundManager>().Play("ButtonClick");
 	}
 
 	/// <summary>
@@ -483,6 +505,8 @@ public class ButtonsManager : MonoBehaviour
 				if (k == 0 && x != j)
 				{
 					allButtons[i, x, 0, 0].selected = false;
+
+					allButtons[i, x, 0, 0].MyRoundedness = allButtons[i, x, 0, 0].RoundedDefault;
 				}
 
 				//myButton of this index.
@@ -512,6 +536,9 @@ public class ButtonsManager : MonoBehaviour
 				if (k == 0)
 				{
 					allButtons[i, j, x, 0].selected = false;
+
+					allButtons[i, j, x, 0].MyRoundedness = allButtons[i, x, 0, 0].RoundedDefault;
+
 				}
 
 				//myButton of this index
@@ -539,6 +566,9 @@ public class ButtonsManager : MonoBehaviour
 				if (m == 0)
 				{
 					allButtons[i, j, k, x].selected = false;
+
+					allButtons[i, j, k, x].MyRoundedness = allButtons[i, x, 0, 0].RoundedDefault;
+
 				}
 
 				//myButton of this index
