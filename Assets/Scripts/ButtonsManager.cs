@@ -182,7 +182,7 @@ public class ButtonsManager : MonoBehaviour
 		DefineButtonData("Body-Basic Input Node-A-");
 		//DefineButtonData("Body-Spawn Object--");
 		//DefineButtonData("Body-Spawn Object-Basic 3D Shape-");
-		DefineButtonData("Body-Spawn Object-Basic 3D Shape-Cube");
+		//DefineButtonData("Body-Spawn Object-Basic 3D Shape-Cube");
 
 	}
 
@@ -195,11 +195,12 @@ public class ButtonsManager : MonoBehaviour
 	/// <param name="d">Description of a new button in the 3rd column.</param>
 	public void DefineButtonData(string myDirectory)
     {
-		//separates directory string into individual directories
-		string a = myDirectory.Split("-")[0];
-		string b = myDirectory.Split("-")[1];
-		string c = myDirectory.Split("-")[2];
-		string d = myDirectory.Split("-")[3];
+		//separate directory string into individual strings
+		string[] s = myDirectory.Split("-");
+		string a = s[0];
+		string b = s[1];
+		string c = s[2];
+		string d = s[3];
 
 		Vector4 buttonLocation = new Vector4(smallButtonCount, regularButtonCount, regularButtonCount, regularButtonCount);
 		bool finalButtonFlag = true;
@@ -220,8 +221,6 @@ public class ButtonsManager : MonoBehaviour
 		{
 			if (allButtons[i, 0, 0, 0].Description == a)
 			{
-				foundButtonFlag = true;
-
 				if (c == "")
 				{
 					//since we're adding a new button, the button to the left is no longer the final button in the sequence.
@@ -264,7 +263,8 @@ public class ButtonsManager : MonoBehaviour
 			for (int j = 1; j < regularButtonCount; j++)
 			{
 				if (allButtons[i, 0, 0, 0].Description == a && allButtons[i, j, 0, 0].Description == b)
-				{ 
+				{
+					foundButtonFlag = true;
 
 					if (c != "" && d == "")
 					{
@@ -300,22 +300,34 @@ public class ButtonsManager : MonoBehaviour
 							}
 						}
 					}
-
-					foundButtonFlag = true;
 				}
+
+				
 
 				//if we've looped through the entire column and haven't found a button that matches, create a button to match!
-				if (j == regularButtonCount && !foundButtonFlag)
+				if (j == regularButtonCount - 1 && c != "")
 				{
-					DefineButtonData(a + "-" + b + "-" + "" + "-" + "");
-					DefineButtonData(a + "-" + b + "-" + c + "-" + "");
+					if (!foundButtonFlag)
+					{
+						Debug.Log("Creating String To Match In Column 2!");
+
+						DefineButtonData(a + "-" + b + "-" + "" + "-" + "");
+						DefineButtonData(a + "-" + b + "-" + c + "-" + "");
+					}
+                    else
+                    {
+						foundButtonFlag = false;
+                    }
 				}
+				
 
 				//k loops thru the 3rd column of the array
 				for (int k = 1; k < regularButtonCount; k++)
 				{
 					if (allButtons[i, 0, 0, 0].Description == a && allButtons[i, j, 0, 0].Description == b && allButtons[i, j, k, 0].Description == c)
 					{
+						foundButtonFlag = true;
+
 						if (d != "")
 						{
 							//since we're adding a new button, the button to the left is no longer the final button in the sequence.
@@ -352,15 +364,24 @@ public class ButtonsManager : MonoBehaviour
 							}
 						}
 
-						foundButtonFlag = true;
 					}
 
-
+					
 					//if we've looped through the entire column and haven't found a button that matches, create a button to match!
-					if (j == regularButtonCount && !foundButtonFlag)
+					if (k == regularButtonCount - 1 && d != "")
 					{
-						DefineButtonData(a + "-" + b + "-" + c + "-" + "");
-						DefineButtonData(a + "-" + b + "-" + c + "-" + d);
+						if (!foundButtonFlag)
+						{
+							Debug.Log("Creating String To Match In Column 3!");
+
+							DefineButtonData(a + "-" + b + "-" + "" + "-" + "");
+							DefineButtonData(a + "-" + b + "-" + c + "-" + "");
+							DefineButtonData(a + "-" + b + "-" + c + "-" + d);
+						}
+						else
+						{
+							foundButtonFlag = false;
+						}
 					}
 
 					//m loops thru the 4th column of the array to determine if the path has more buttons ahead
