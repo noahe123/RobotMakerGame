@@ -1403,6 +1403,30 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Select 1
+    clip: {fileID: 8300000, guid: caecb60d0ff74a846a9baea97073422f, type: 3}
+    volume: 0.749
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Select 2
+    clip: {fileID: 8300000, guid: ab4b2c378ff7a5545a4cc4f090d6754b, type: 3}
+    volume: 0.749
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Select 3
+    clip: {fileID: 8300000, guid: 738b025bf6c480d4194cc44515cfb408, type: 3}
+    volume: 0.749
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cancel
+    clip: {fileID: 8300000, guid: 12d5a7563d84dce4aacd0708a2737b48, type: 3}
+    volume: 0.749
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1009398842
 Transform:
   m_ObjectHideFlags: 0
