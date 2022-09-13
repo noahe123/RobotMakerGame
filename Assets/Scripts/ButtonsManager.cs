@@ -199,10 +199,15 @@ public class ButtonsManager : MonoBehaviour
 
 		//******************* OBJECTS *******************
 
+		DefineButtonData("Objects-Templates--");
+		DefineButtonData("Objects-Templates-Farm Animals-");
+		DefineButtonData("Objects-Templates-Farm Animals-Cow");
+		DefineButtonData("Objects-Templates-Farm Animals-Cow");
 		DefineButtonData("Objects-Templates-Farm Animals-Cow");
 		DefineButtonData("Objects-Templates-Farm Animals-Goose");
 		DefineButtonData("Objects-Templates-Farm Animals-Duck");
 
+		DefineButtonData("Objects-Templates-People-");
 		DefineButtonData("Objects-Templates-People-Astronaut");
 		DefineButtonData("Objects-Templates-People-Businessperson");
 		DefineButtonData("Objects-Templates-People-Ballerina");
@@ -429,7 +434,7 @@ public class ButtonsManager : MonoBehaviour
 		if (mB.Description != null && mB.Description != "")
 		{
 			allButtons[(int)buttonLocation.x, (int)buttonLocation.y, (int)buttonLocation.z, (int)buttonLocation.w] = mB;
-		}
+		}/*
         else
         {
 			//add button data for other columns if they don't already exist
@@ -442,9 +447,7 @@ public class ButtonsManager : MonoBehaviour
 					DefineButtonData(a + "-" + b + "-" + c + "-" + d);
 				}
 			}
-			allButtons[(int)buttonLocation.x, (int)buttonLocation.y, (int)buttonLocation.z, (int)buttonLocation.w] = mB;
-
-		}
+		}*/
 
 		return;
 	}
@@ -641,9 +644,8 @@ public class ButtonsManager : MonoBehaviour
 
 			for (int x = 1; x < regularButtonCount; x++)
 			{
-
 				//reset OTHER 'selected' values of buttons of the same column
-				if (k == 0)
+				if (m == 0 && x != k)
 				{
 					allButtons[i, j, x, 0].selected = false;
 
@@ -672,6 +674,7 @@ public class ButtonsManager : MonoBehaviour
 
 			for (int x = 1; x < regularButtonCount; x++)
 			{
+				/*
 				//reset OTHER 'selected' values of buttons of the same column
 				if (m == 0)
 				{
@@ -680,6 +683,8 @@ public class ButtonsManager : MonoBehaviour
 					allButtons[i, j, k, x].MyRoundedness = allButtons[i, x, 0, 0].RoundedDefault;
 
 				}
+				*/
+				allButtons[i, j, k, x].selected = false;
 
 				//myButton of this index
 				MyButton myButtonIndex = allButtons[i, j, k, x];
