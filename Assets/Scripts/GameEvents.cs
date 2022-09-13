@@ -12,13 +12,13 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    public event Action onSampleEvent;
+    public event Action<Vector4> onSampleEvent;
 
-    public void SampleEvent()
+    public void SampleEvent(Vector4 id)
     {
         if (onSampleEvent != null)
         {
-            onSampleEvent();
+            onSampleEvent(id);
         }
     }
 

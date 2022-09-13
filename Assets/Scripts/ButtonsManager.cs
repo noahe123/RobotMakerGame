@@ -155,39 +155,35 @@ public class ButtonsManager : MonoBehaviour
 
 
 		//Test New Function
-		DefineButtonData("Input", "Basic Input Node", "", "");
-		DefineButtonData("Input", "Basic Input Node", "COOL NODE", "");
-		DefineButtonData("Input", "Basic Input Node", "POOP", "");
-		DefineButtonData("Input", "Basic Input Node", "COOL NODE", "IT WORKS!");
-		DefineButtonData("Input", "Basic ssdg Node", "", "");
-		DefineButtonData("Input", "Basic ssdg Node", "COOL NODE", "");
-		DefineButtonData("Input", "Basic ssdg Node", "POOP", "");
+		DefineButtonData("Input-Basic Input Node--");
+		DefineButtonData("Input-Basic Input Node-COOL NODE-");
+		DefineButtonData("Input-Basic Input Node-POOP-");
+		DefineButtonData("Input-Basic Input Node-COOL NODE-IT WORKS!");
+		DefineButtonData("Input-Basic ssdg Node--");
+		DefineButtonData("Input-Basic ssdg Node-COOL NODE-");
+		DefineButtonData("Input-Basic ssdg Node-POOP-");
 
-		DefineButtonData("Fun", "Basic Input Node", "", "");
-		DefineButtonData("Fun", "Basic Input Node", "COOL NODE", "");
-		DefineButtonData("Fun", "Basic Input Node", "POOP", "");
-		DefineButtonData("Fun", "Basic Input Node", "COOL NODE", "IT WORKS!");
+		DefineButtonData("Fun-Basic Input Node--");
+		DefineButtonData("Fun-Basic Input Node-COOL NODE-");
+		DefineButtonData("Fun-Basic Input Node-POOP-");
+		DefineButtonData("Fun-Basic Input Node-COOL NODE-IT WORKS!");
 
-		DefineButtonData("Output", "Basic Input Node", "", "");
-		DefineButtonData("Output", "Basic Input Node", "COOL NODE", "");
-		DefineButtonData("Output", "Basic Input Node", "POOP", "");
-		DefineButtonData("Output", "Basic Input Node", "COOL NODE", "IT WORKS!");
+		DefineButtonData("Output-Basic Input Node--");
+		DefineButtonData("Output-Basic Input Node-COOL NODE-");
+		DefineButtonData("Output-Basic Input Node-POOP-");
+		DefineButtonData("Output-Basic Input Node-COOL NODE-IT WORKS!");
 
-		DefineButtonData("Body", "Basic Input Node", "", "");
-		DefineButtonData("Body", "Basic Input Node", "COOL NODE", "");
-		DefineButtonData("Body", "Basic Input Node", "POOP", "");
-		DefineButtonData("Body", "Basic Input Node", "COOL NODE", "IT WORKS!");
+		DefineButtonData("Body-Basic Input Node--");
+		DefineButtonData("Body-Basic Input Node-COOL NODE-");
+		DefineButtonData("Body-Basic Input Node-POOP-");
+		DefineButtonData("Body-Basic Input Node-COOL NODE-IT WORKS!");
 
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
-		DefineButtonData("Body", "Basic Input Node", "A", "");
+		DefineButtonData("Body-Basic Input Node-A-");
+		DefineButtonData("Body-Basic Input Node-A-");
+		//DefineButtonData("Body-Spawn Object--");
+		//DefineButtonData("Body-Spawn Object-Basic 3D Shape-");
+		DefineButtonData("Body-Spawn Object-Basic 3D Shape-Cube");
+
 	}
 
 	/// <summary>
@@ -197,10 +193,17 @@ public class ButtonsManager : MonoBehaviour
 	/// <param name="b">Description of a new button in the 1st column.</param>
 	/// <param name="c">Description of a new button in the 2nd column.</param>
 	/// <param name="d">Description of a new button in the 3rd column.</param>
-	public void DefineButtonData(string a, string b, string c, string d)
+	public void DefineButtonData(string myDirectory)
     {
+		//separates directory string into individual directories
+		string a = myDirectory.Split("-")[0];
+		string b = myDirectory.Split("-")[1];
+		string c = myDirectory.Split("-")[2];
+		string d = myDirectory.Split("-")[3];
+
 		Vector4 buttonLocation = new Vector4(smallButtonCount, regularButtonCount, regularButtonCount, regularButtonCount);
 		bool finalButtonFlag = true;
+		bool foundButtonFlag = false;
 
 		//return and give an error if no description was provided
 		if (a == "" || b == "")
@@ -215,61 +218,25 @@ public class ButtonsManager : MonoBehaviour
 		//i loops thru the 1st column of the array
 		for (int i = 1; i < smallButtonCount; i++)
 		{
-			if (allButtons[i, 0, 0, 0].Description == a && c == "")
-            {
-				//since we're adding a new button, the button to the left is no longer the final button in the sequence.
-				allButtons[i, 0, 0, 0].finalButton = false;
-
-				//look for an empty slot in the column
-				for (int w = regularButtonCount-1; w >= 0; w--)
-                {
-					//is the slot empty?
-					if (allButtons[i, w, 0, 0].Description == null || allButtons[i, w, 0, 0].Description == "")
-                    {
-						//define the button data at this location!
-						mB = allButtons[i, w, 0, 0];
-						mB.Description = b;
-						buttonLocation = new Vector4(i, w, 0, 0);
-
-						//make the button at the top of the column rounded
-						mB.RoundedDefault = Roundedness.None;
-						mB.RoundedSelect = Roundedness.None;
-
-						break;
-					}
-                    else if (w == regularButtonCount - 1) //make the button at the bottom of the column rounded
-                    {
-						allButtons[i, w, 0, 0].RoundedDefault = Roundedness.None;
-						allButtons[i, w, 0, 0].RoundedSelect = Roundedness.None;
-
-					}
-					else if (w != regularButtonCount - 1) //make the buttons in between the top and bottom of the column flat
-					{
-						allButtons[i, w, 0, 0].RoundedDefault = Roundedness.None;
-						allButtons[i, w, 0, 0].RoundedSelect = Roundedness.None;
-					}
-				}
-				//Debug.Log("DefineButtonData()");
-
-            }
-			//j loops thru the 2nd column of the array
-			for (int j = 1; j < regularButtonCount; j++)
+			if (allButtons[i, 0, 0, 0].Description == a)
 			{
-				if (allButtons[i, 0, 0, 0].Description == a && allButtons[i, j, 0, 0].Description == b && c != "" && d == "")
+				foundButtonFlag = true;
+
+				if (c == "")
 				{
 					//since we're adding a new button, the button to the left is no longer the final button in the sequence.
-					allButtons[i, j, 0, 0].finalButton = false;
+					allButtons[i, 0, 0, 0].finalButton = false;
 
 					//look for an empty slot in the column
-					for (int w = j; w >= 0; w--)
+					for (int w = regularButtonCount - 1; w >= 0; w--)
 					{
 						//is the slot empty?
-						if (allButtons[i, j, w, 0].Description == null || allButtons[i, j, w, 0].Description == "")
+						if (allButtons[i, w, 0, 0].Description == null || allButtons[i, w, 0, 0].Description == "")
 						{
 							//define the button data at this location!
-							mB = allButtons[i, j, w, 0];
-							mB.Description = c;
-							buttonLocation = new Vector4(i, j, w, 0);
+							mB = allButtons[i, w, 0, 0];
+							mB.Description = b;
+							buttonLocation = new Vector4(i, w, 0, 0);
 
 							//make the button at the top of the column rounded
 							mB.RoundedDefault = Roundedness.None;
@@ -277,36 +244,43 @@ public class ButtonsManager : MonoBehaviour
 
 							break;
 						}
-						else if (w == j) //make the button at the bottom of the column rounded
+						else if (w == regularButtonCount - 1) //make the button at the bottom of the column rounded
 						{
-							allButtons[i, j, w, 0].RoundedDefault = Roundedness.None;
-							allButtons[i, j, w, 0].RoundedSelect = Roundedness.None;
+							allButtons[i, w, 0, 0].RoundedDefault = Roundedness.None;
+							allButtons[i, w, 0, 0].RoundedSelect = Roundedness.None;
+
 						}
-						else if (w != j) //make the buttons in between the top and bottom of the column flat
+						else if (w != regularButtonCount - 1) //make the buttons in between the top and bottom of the column flat
 						{
-							allButtons[i, j, w, 0].RoundedDefault = Roundedness.None;
-							allButtons[i, j, w, 0].RoundedSelect = Roundedness.None;
+							allButtons[i, w, 0, 0].RoundedDefault = Roundedness.None;
+							allButtons[i, w, 0, 0].RoundedSelect = Roundedness.None;
 						}
 					}
 				}
-				//k loops thru the 3rd column of the array
-				for (int k = 1; k < regularButtonCount; k++)
-				{
-					if (allButtons[i, 0, 0, 0].Description == a && allButtons[i, j, 0, 0].Description == b && allButtons[i, j, k, 0].Description == c && d != "")
+			}
+
+
+			//j loops thru the 2nd column of the array
+			for (int j = 1; j < regularButtonCount; j++)
+			{
+				if (allButtons[i, 0, 0, 0].Description == a && allButtons[i, j, 0, 0].Description == b)
+				{ 
+
+					if (c != "" && d == "")
 					{
 						//since we're adding a new button, the button to the left is no longer the final button in the sequence.
-						allButtons[i, j, k, 0].finalButton = false;
+						allButtons[i, j, 0, 0].finalButton = false;
 
 						//look for an empty slot in the column
-						for (int w = k; w >= 0; w--)
+						for (int w = j; w >= 0; w--)
 						{
 							//is the slot empty?
-							if (allButtons[i, j, k, w].Description == null || allButtons[i, j, k, w].Description == "")
+							if (allButtons[i, j, w, 0].Description == null || allButtons[i, j, w, 0].Description == "")
 							{
 								//define the button data at this location!
-								mB = allButtons[i, j, k, w];
-								mB.Description = d;
-								buttonLocation = new Vector4(i, j, k, w);
+								mB = allButtons[i, j, w, 0];
+								mB.Description = c;
+								buttonLocation = new Vector4(i, j, w, 0);
 
 								//make the button at the top of the column rounded
 								mB.RoundedDefault = Roundedness.None;
@@ -314,19 +288,81 @@ public class ButtonsManager : MonoBehaviour
 
 								break;
 							}
-							else if (w == k) //make the button at the bottom of the column rounded
+							else if (w == j) //make the button at the bottom of the column rounded
 							{
-								allButtons[i, j, k, w].RoundedDefault = Roundedness.None;
-								allButtons[i, j, k, w].RoundedSelect = Roundedness.None;
+								allButtons[i, j, w, 0].RoundedDefault = Roundedness.None;
+								allButtons[i, j, w, 0].RoundedSelect = Roundedness.None;
 							}
-							else if (w != k) //make the buttons in between the top and bottom of the column flat
+							else if (w != j) //make the buttons in between the top and bottom of the column flat
 							{
-								allButtons[i, j, k, w].RoundedDefault = Roundedness.None;
-								allButtons[i, j, k, w].RoundedSelect = Roundedness.None;
-
+								allButtons[i, j, w, 0].RoundedDefault = Roundedness.None;
+								allButtons[i, j, w, 0].RoundedSelect = Roundedness.None;
 							}
 						}
 					}
+
+					foundButtonFlag = true;
+				}
+
+				//if we've looped through the entire column and haven't found a button that matches, create a button to match!
+				if (j == regularButtonCount && !foundButtonFlag)
+				{
+					DefineButtonData(a + "-" + b + "-" + "" + "-" + "");
+					DefineButtonData(a + "-" + b + "-" + c + "-" + "");
+				}
+
+				//k loops thru the 3rd column of the array
+				for (int k = 1; k < regularButtonCount; k++)
+				{
+					if (allButtons[i, 0, 0, 0].Description == a && allButtons[i, j, 0, 0].Description == b && allButtons[i, j, k, 0].Description == c)
+					{
+						if (d != "")
+						{
+							//since we're adding a new button, the button to the left is no longer the final button in the sequence.
+							allButtons[i, j, k, 0].finalButton = false;
+
+							//look for an empty slot in the column
+							for (int w = k; w >= 0; w--)
+							{
+								//is the slot empty?
+								if (allButtons[i, j, k, w].Description == null || allButtons[i, j, k, w].Description == "")
+								{
+									//define the button data at this location!
+									mB = allButtons[i, j, k, w];
+									mB.Description = d;
+									buttonLocation = new Vector4(i, j, k, w);
+
+									//make the button at the top of the column rounded
+									mB.RoundedDefault = Roundedness.None;
+									mB.RoundedSelect = Roundedness.None;
+
+									break;
+								}
+								else if (w == k) //make the button at the bottom of the column rounded
+								{
+									allButtons[i, j, k, w].RoundedDefault = Roundedness.None;
+									allButtons[i, j, k, w].RoundedSelect = Roundedness.None;
+								}
+								else if (w != k) //make the buttons in between the top and bottom of the column flat
+								{
+									allButtons[i, j, k, w].RoundedDefault = Roundedness.None;
+									allButtons[i, j, k, w].RoundedSelect = Roundedness.None;
+
+								}
+							}
+						}
+
+						foundButtonFlag = true;
+					}
+
+
+					//if we've looped through the entire column and haven't found a button that matches, create a button to match!
+					if (j == regularButtonCount && !foundButtonFlag)
+					{
+						DefineButtonData(a + "-" + b + "-" + c + "-" + "");
+						DefineButtonData(a + "-" + b + "-" + c + "-" + d);
+					}
+
 					//m loops thru the 4th column of the array to determine if the path has more buttons ahead
 					for (int m = 1; m < regularButtonCount; m++)
 					{
@@ -416,10 +452,22 @@ public class ButtonsManager : MonoBehaviour
 		}
     }
 
-	public void TriggerOnSampleEvent()
+	public void TriggerOnSampleEvent(Vector4 id)
     {
-		Debug.Log("SAMPLE EVENT!!!");
-    }
+		if (allButtons[(int)id.x, 0, 0, 0].Description == "Body")
+		{
+			if (allButtons[(int)id.x, (int)id.y, 0, 0].Description == "Spawn Object")
+			{
+				if (allButtons[(int)id.x, (int)id.y, (int)id.z, 0].Description == "Basic 3D Shape")
+				{
+					if (allButtons[(int)id.x, (int)id.y, (int)id.z, (int)id.w].Description == "Cube")
+					{
+						Debug.Log("Spawn Cube!");
+					}
+				}
+			}
+		}
+	}
 
 	public void CategoryButtonClick(int category)
     {
@@ -471,9 +519,10 @@ public class ButtonsManager : MonoBehaviour
 
 			FindObjectOfType<SoundManager>().Play("Spawn");
 
+			Vector4 id = new Vector4(pi, pj, pk, pm);
 
 			//button functionality
-			GameEvents.current.SampleEvent();
+			GameEvents.current.SampleEvent(id);
 
 			return;
         }
