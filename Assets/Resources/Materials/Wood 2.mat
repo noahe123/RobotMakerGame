@@ -70,7 +70,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.381
     - _GlossyReflections: 1
-    - _MapScale: 0.2
+    - _MapScale: 0.4
     - _MaxTriSize: 18.9
     - _Metallic: 0
     - _Mode: 0
