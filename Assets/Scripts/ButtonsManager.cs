@@ -215,6 +215,8 @@ public class ButtonsManager : MonoBehaviour
 		DefineButtonData("Objects-Templates-Monsters-Ghoul");
 		DefineButtonData("Objects-Templates-Monsters-Zombie");
 
+		DefineButtonData("Objects-Simple Objects--");
+		DefineButtonData("Objects-Simple Objects-Cube-");
 		DefineButtonData("Objects-Simple Objects-Cube-Cuboid 1");
 		DefineButtonData("Objects-Simple Objects-Cube-Cuboid 2");
 		DefineButtonData("Objects-Simple Objects-Cube-Cuboid 3");
@@ -440,10 +442,11 @@ public class ButtonsManager : MonoBehaviour
 			//add button data for other columns if they don't already exist
 			if (c != "")
             {
+				Debug.Log(a + "-" + b + "-" + c + "-" + d);
 				DefineButtonData(a + "-" + b + "-" + "" + "-" + "");
 				DefineButtonData(a + "-" + b + "-" + c + "-" + "");
 				if (d != "")
-                {
+				{
 					DefineButtonData(a + "-" + b + "-" + c + "-" + d);
 				}
 			}
