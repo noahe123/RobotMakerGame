@@ -786,7 +786,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Standalone: CLAYXELS_BUILTIN;CLAYXELS_RETOPO
+    Standalone: CLAYXELS_BUILTIN;CLAYXELS_RETOPO;AMPLIFY_SHADER_EDITOR
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
