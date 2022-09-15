@@ -1248,7 +1248,9 @@ namespace Clayxels{
 			if(freeMemory){
 				ClayContainer.clearFrozenMeshBuffers();
 			}
-			
+
+
+
 			return mesh;
 		}
 
@@ -3276,8 +3278,10 @@ namespace Clayxels{
 
 				ClayContainer.pickingMeshMaterialProperties.SetInt("containerId", instance.containerId);
 				ClayContainer.pickingMeshMaterialProperties.SetMatrix("objectMatrix", instance.transform.localToWorldMatrix);
+				//making a change
+				//ClayContainer.pickingMeshMaterialProperties.SetMatrix("objectMatrix", instance.transform.localToWorldMatrix);
 
-				if(this.renderMode == ClayContainer.RenderModes.polySplat){
+				if (this.renderMode == ClayContainer.RenderModes.polySplat){
 					ClayContainer.pickingCommandBuffer.DrawProceduralIndirect(Matrix4x4.identity, ClayContainer.pickingMeshMaterialPolySplat, -1, 
 						MeshTopology.Triangles, this.indirectDrawArgsBuffer, 0, ClayContainer.pickingMeshMaterialProperties);
 				}
