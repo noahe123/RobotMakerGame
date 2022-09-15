@@ -8,14 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wood 3
-  m_Shader: {fileID: -6465566751694194690, guid: 811d7310dcb8f6048873a6a7a5ce5cda, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 2953d41f3f33fc84795e9e6c3622dcc4, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -64,6 +65,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0e35fab833d643d8bf9af776abf57a39_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d8054b029afc49979652e0222df1abe8_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f8b2620acf984da1b3162958d2c79c72_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SecondaryText:
         m_Texture: {fileID: 2800000, guid: aec9e26b275a6b44fb5e223b73c2a9c6, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -93,6 +106,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 10
+    - _CastShadows: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -108,13 +122,13 @@ Material:
     - _MaxTriSize: 18.9
     - _Metallic: 0.02
     - _Mode: 0
-    - _Normal_Strength: 10.31
+    - _Normal_Strength: 39.95
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.6
+    - _Smoothness: 0.25
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -124,7 +138,9 @@ Material:
     - _WireSmoothness: 2.91
     - _WireThickness: 789
     - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 1
+    - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 0.75, b: 0.75, a: 1}
     - _Color: {r: 0.58431375, g: 0.28589028, b: 0.18039216, a: 1}
