@@ -233,7 +233,7 @@ Shader "ClayxelClayShader"
 }
 /*ASEBEGIN
 Version=18935
-455;73;958;603;3973.858;1429.985;5.110226;True;True
+455;73;958;603;2412.166;1197.045;4.154064;True;False
 Node;AmplifyShaderEditor.PosVertexDataNode;148;-2211.157,-66.06409;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.Vector3Node;134;-2195.797,133.3394;Inherit;False;Property;_normalMapOffset;normalMapOffset;10;0;Create;True;0;0;0;False;0;False;0,0,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.MMatrixNode;169;-1830.2,292.1093;Inherit;False;0;1;FLOAT4x4;0
@@ -242,16 +242,16 @@ Node;AmplifyShaderEditor.CustomExpressionNode;173;-1807.61,-61.56998;Inherit;Fal
 Node;AmplifyShaderEditor.RangedFloatNode;178;-1789.495,-151.2421;Inherit;False;Constant;_falloff;falloff;11;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;143;-1931.44,-320.7541;Inherit;False;Property;_normalTileY;normalTileY;9;0;Create;True;0;0;0;False;0;False;1;0;0;10;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;141;-1924.622,-409.3932;Inherit;False;Property;_normalTileX;normalTileX;8;0;Create;True;0;0;0;False;0;False;1;0;0;10;0;1;FLOAT;0
-Node;AmplifyShaderEditor.TexturePropertyNode;3;-1384.427,-18.78528;Inherit;True;Property;_MainTex1;Texture;4;1;[NoScaleOffset];Create;False;0;0;0;False;0;False;None;1aa3096b1b9d9204eaa6c75a4275adb1;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;167;-1689.859,207.9051;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.TexturePropertyNode;102;-1606.038,-601.951;Inherit;True;Property;_normal;normal;6;1;[NoScaleOffset];Create;True;0;0;0;False;0;False;None;07944ba93895c3d43869c3b14beb60b4;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
-Node;AmplifyShaderEditor.DynamicAppendNode;142;-1608.33,-355.3691;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.RangedFloatNode;104;-1827.57,-242.0164;Inherit;False;Property;_normalStrength;normalStrength;7;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;179;-1491.895,-183.2421;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.TexCoordVertexDataNode;4;-1418.546,180.2328;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.VertexIdVariableNode;5;-606.8448,369.614;Inherit;False;0;1;INT;0
-Node;AmplifyShaderEditor.RangedFloatNode;2;-806.6102,448.4052;Inherit;False;Property;_ClayxelSize;ClayxelSize;2;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;119;-676.8085,572.579;Inherit;False;Constant;_orient;orient;9;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;2;-806.6102,448.4052;Inherit;False;Property;_ClayxelSize;ClayxelSize;2;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.VertexIdVariableNode;5;-606.8448,369.614;Inherit;False;0;1;INT;0
+Node;AmplifyShaderEditor.TexCoordVertexDataNode;4;-1418.546,180.2328;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SimpleAddOpNode;179;-1491.895,-183.2421;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;104;-1827.57,-242.0164;Inherit;False;Property;_normalStrength;normalStrength;7;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.DynamicAppendNode;142;-1608.33,-355.3691;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
+Node;AmplifyShaderEditor.TexturePropertyNode;102;-1606.038,-601.951;Inherit;True;Property;_normal;normal;6;1;[NoScaleOffset];Create;True;0;0;0;False;0;False;None;07944ba93895c3d43869c3b14beb60b4;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;167;-1689.859,207.9051;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.TexturePropertyNode;3;-1384.427,-18.78528;Inherit;True;Property;_MainTex1;Texture;4;1;[NoScaleOffset];Create;False;0;0;0;False;0;False;None;1aa3096b1b9d9204eaa6c75a4275adb1;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.TriplanarNode;100;-1186.048,-312.2373;Inherit;True;Spherical;Object;True;Top Texture 0;_TopTexture0;white;0;None;Mid Texture 0;_MidTexture0;white;0;None;Bot Texture 0;_BotTexture0;white;1;None;Triplanar Sampler;Tangent;10;0;SAMPLER2D;;False;5;FLOAT;1;False;1;SAMPLER2D;;False;6;FLOAT;0;False;2;SAMPLER2D;;False;7;FLOAT;0;False;9;FLOAT3;0,0,0;False;8;FLOAT;1;False;3;FLOAT2;1,1;False;4;FLOAT;1;False;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;12;-432.2874,-93.2849;Inherit;False;Property;_Emission;Emission;5;1;[HDR];Create;True;0;0;0;False;0;False;1,1,1,1;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;10;-695.9645,-23.20914;Inherit;False;Property;_Metallic;Metallic;0;0;Create;True;0;0;0;True;0;False;0;0;0;0;0;1;FLOAT;0
@@ -262,12 +262,12 @@ Node;AmplifyShaderEditor.SamplerNode;11;-1039.756,76.75246;Inherit;True;Property
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;77;174.7608,-24.62549;Float;False;True;-1;5;;0;0;Standard;ClayxelClayShader;False;False;False;False;False;False;False;True;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;4;Custom;0.9;True;True;0;True;Opaque;;AlphaTest;All;18;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;5;False;-1;10;False;-1;0;5;False;-1;10;False;-1;0;False;-1;0;False;-1;0;False;5.8;0,0,0,0;VertexScale;True;False;Cylindrical;False;True;Absolute;0;;1;-1;-1;-1;0;True;0;0;False;-1;-1;0;False;-1;1;Include;Assets/Clayxels/Resources/clayxelSRPUtils.cginc;False;;Custom;0;0;False;0.1;False;-1;0;False;9;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;166;0;148;0
 WireConnection;166;1;134;0
-WireConnection;167;0;166;0
-WireConnection;167;1;169;0
-WireConnection;142;0;141;0
-WireConnection;142;1;143;0
 WireConnection;179;0;178;0
 WireConnection;179;1;173;0
+WireConnection;142;0;141;0
+WireConnection;142;1;143;0
+WireConnection;167;0;166;0
+WireConnection;167;1;169;0
 WireConnection;100;0;102;0
 WireConnection;100;9;167;0
 WireConnection;100;8;104;0
@@ -287,4 +287,4 @@ WireConnection;77;10;11;4
 WireConnection;77;11;7;3
 WireConnection;77;12;7;4
 ASEEND*/
-//CHKSM=36064C4498E665A4E21981A777649D40F32590ED
+//CHKSM=7EF538D2BC134AB7123DCD76EBEC20F720EDA74A
