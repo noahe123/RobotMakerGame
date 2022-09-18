@@ -60,7 +60,6 @@ public class TestClayxelMeshCollider : MonoBehaviour
             bool freeMemory = false;// we don't want to reallocate mesh buffers on each frame
             float smoothNormalAngle = 0.0f;
             Mesh mesh = this.clayxel.generateMesh(levelOfDetail, vertexColors, normals, smoothNormalAngle, freeMemory);
-            //mesh.RecalculateNormals();
             
             // finally we visualize the mesh and set the collider
             if(this.gameObject.GetComponent<MeshFilter>().sharedMesh != null){
@@ -70,10 +69,6 @@ public class TestClayxelMeshCollider : MonoBehaviour
 
             this.gameObject.GetComponent<MeshFilter>().sharedMesh = mesh;
             this.gameObject.GetComponent<MeshCollider>().sharedMesh = mesh;
-
-            //this.gameObject.GetComponent<MeshFilter>().sharedMesh.RecalculateNormals();
-            //this.gameObject.GetComponent<MeshCollider>().sharedMesh.RecalculateNormals();
-
         }
 
         this.frameSkip = (this.frameSkip + 1) % 10;
