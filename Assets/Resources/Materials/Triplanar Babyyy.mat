@@ -138,14 +138,14 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0.01
     - _Mode: 0
-    - _NormStr: 3.6
+    - _NormStr: 6
     - _NormStr1: 0
     - _NormalStrength: 16.9
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.6
+    - _Smoothness: 0.48
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

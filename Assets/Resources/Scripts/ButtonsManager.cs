@@ -224,6 +224,21 @@ public class ButtonsManager : MonoBehaviour
 		DefineButtonData("Objects-Simple Objects-Cube-Cuboid 5");
 		DefineButtonData("Objects-Simple Objects-Cube-Cuboid 6");
 
+		DefineButtonData("Output-Cuboid--");
+		DefineButtonData("Output-Thingy--");
+		DefineButtonData("Output-Bleepy Blooper--");
+		DefineButtonData("Output-Blippity Bop--");
+		DefineButtonData("Output-Zippity Dingus--");
+		DefineButtonData("Output-Cuboid-Cubert-");
+		DefineButtonData("Output-Cuboid-Cuboso-");
+		DefineButtonData("Output-Cuboid-Cuberium-");
+		DefineButtonData("Output-Cuboid-Cuboso-Cuboso Type 1");
+		DefineButtonData("Output-Cuboid-Cuboso-Cuboso Type 2");
+		DefineButtonData("Output-Cuboid-Cuboso-Cuboso Type 3");
+		DefineButtonData("Output-Cuboid-Cuboso-Cuboso Type 4");
+
+
+
 
 		/*
 		DefineButtonData("Objects-Simple Objects-Sphere-Spheroid 1");
