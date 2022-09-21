@@ -260,7 +260,7 @@ public class ButtonsManager : MonoBehaviour
 	public void DefineButtonData(string myDirectory)
     {
 		//separate directory string into individual strings
-		string[] s = myDirectory.Split("-");
+		string[] s = myDirectory.Split(new string[] { "-" }, StringSplitOptions.None);
 		string a = s[0];
 		string b = s[1];
 		string c = s[2];
