@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,8 +118,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    maxJobWorkers: 0
-    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -149,39 +147,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.08148098, y: 0.83703667, z: -0.104444444}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1462096956}
   m_Father: {fileID: 869686373}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &58889370
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
-  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _Metallic: 0
-    - _Smoothness: 0.5
-    m_Colors:
-    - _Emission: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &84282357
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +179,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.21312657, w: 0.9770247}
   m_LocalPosition: {x: 0.14276361, y: 0.04495144, z: 0.11}
   m_LocalScale: {x: 0.6554484, y: 1.3817412, z: 0.5166984}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 827526170}
   m_RootOrder: 1
@@ -263,7 +232,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.65, y: 4.84, z: -0.47000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792269390}
   m_RootOrder: 3
@@ -295,7 +263,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.25365382, z: -0, w: 0.96729505}
   m_LocalPosition: {x: 0.83, y: 0.57, z: -0.58}
   m_LocalScale: {x: 0.56036, y: 0.56036, z: 0.39871654}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 390030220}
   m_RootOrder: 0
@@ -349,7 +316,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.43, y: 0.21000014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792269390}
   m_RootOrder: 0
@@ -381,7 +347,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.45747936, w: 0.88922024}
   m_LocalPosition: {x: 0.08, y: -0.25, z: 0.12}
   m_LocalScale: {x: 0.5621185, y: 1.3817412, z: 0.5166984}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808044231}
   m_RootOrder: 2
@@ -436,7 +401,6 @@ Transform:
   m_LocalRotation: {x: -0.020031169, y: 0.053151876, z: 0.055058006, w: 0.9968662}
   m_LocalPosition: {x: 0.394, y: 0.161, z: -1.028}
   m_LocalScale: {x: 0.198462, y: 0.11946994, z: 0.13659346}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1649352161}
   m_RootOrder: 4
@@ -491,7 +455,6 @@ Transform:
   m_LocalRotation: {x: -0.65517974, y: -0.4151859, z: 0.60807323, w: 0.16913646}
   m_LocalPosition: {x: 0.087, y: 0.609, z: -0.768}
   m_LocalScale: {x: 0.16060694, y: 0.16060692, z: 0.16060692}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 995968463}
   m_RootOrder: 1
@@ -545,7 +508,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.38592577, y: 0.85444456, z: 0.22222224}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 869686373}
   m_Father: {fileID: 1949942785}
@@ -609,12 +571,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -639,7 +599,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &254591450
 Transform:
   m_ObjectHideFlags: 0
@@ -650,11 +609,34 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.6, y: 2.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &283083361
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
+  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Metallic: 0
+    - _Smoothness: 0.5
+    m_Colors:
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &283943013
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +663,6 @@ Transform:
   m_LocalRotation: {x: 0.000551188, y: 0.010947447, z: -0.020658292, w: 0.99972653}
   m_LocalPosition: {x: 0.5792945, y: 0.6360833, z: -0.20975716}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 701628086}
   m_Father: {fileID: 1223931500}
@@ -747,7 +728,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35028738, y: 0, z: -0.1334751}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -778,39 +758,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.8533338, y: 0.16074087, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 441392929}
   m_Father: {fileID: 796114643}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &334112504
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
-  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _Metallic: 0
-    - _Smoothness: 0.5
-    m_Colors:
-    - _Emission: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &345193673
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +790,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.45747933, w: 0.8892203}
   m_LocalPosition: {x: 0.4030497, y: -0.368752, z: 0.11}
   m_LocalScale: {x: 0.5621185, y: 1.3817412, z: 0.5166984}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 827526170}
   m_RootOrder: 2
@@ -892,7 +843,6 @@ Transform:
   m_LocalRotation: {x: -0.0069254385, y: -0.13754976, z: 0.2595621, w: 0.9558555}
   m_LocalPosition: {x: -0.058984518, y: 0.8815915, z: 0.26271975}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 511263623}
   m_RootOrder: 0
@@ -932,7 +882,7 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 58889370}
+  material: {fileID: 2037367513}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: ClayxelContainer
@@ -960,7 +910,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12, y: 0.17, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 110635502}
   - {fileID: 1905749645}
@@ -1046,11 +995,34 @@ Transform:
   m_LocalRotation: {x: 0.028619478, y: 0, z: 0, w: 0.9995904}
   m_LocalPosition: {x: 0, y: 2.9, z: -65.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.28, y: 0, z: 0}
+--- !u!21 &427525874
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
+  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Metallic: 0
+    - _Smoothness: 0.5
+    m_Colors:
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &441392928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1049,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.6711113, y: 0.33407396, z: -0.08000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1331341391}
   m_Father: {fileID: 331922257}
@@ -1111,7 +1082,6 @@ Transform:
   m_LocalRotation: {x: 0.7277686, y: -0.62338525, z: 0.21713929, w: -0.18599544}
   m_LocalPosition: {x: -0.75, y: -3, z: -0.29}
   m_LocalScale: {x: 1, y: 0.39133, z: 0.35176215}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 986132120}
   m_RootOrder: 3
@@ -1183,7 +1153,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.17555577, y: 0.75518507, z: 0.08518517}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1223931500}
   m_Father: {fileID: 985716988}
@@ -1216,7 +1185,6 @@ Transform:
   m_LocalRotation: {x: -0.65517974, y: -0.4151859, z: 0.60807323, w: 0.16913646}
   m_LocalPosition: {x: -0.17300001, y: 0.55300003, z: -0.753}
   m_LocalScale: {x: 0.16060694, y: 0.16060692, z: 0.16060692}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 995968463}
   m_RootOrder: 2
@@ -1271,7 +1239,6 @@ Transform:
   m_LocalRotation: {x: -0.65517974, y: -0.4151859, z: 0.60807323, w: 0.16913646}
   m_LocalPosition: {x: 0.0069999993, y: 0.269, z: -0.44099998}
   m_LocalScale: {x: 1.2014279, y: 0.5450543, z: 0.6132089}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 995968463}
   m_RootOrder: 0
@@ -1326,7 +1293,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.58, z: -0.18}
   m_LocalScale: {x: 2.555867, y: 2.555867, z: 2.555867}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 986132120}
   m_RootOrder: 0
@@ -1380,39 +1346,11 @@ Transform:
   m_LocalRotation: {x: -0.004778647, y: -0.09491128, z: 0.17910157, w: 0.97923017}
   m_LocalPosition: {x: -0.15407398, y: 0.77111155, z: 0.10444444}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 374985665}
   m_Father: {fileID: 701628086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &528238835
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
-  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _Metallic: 0
-    - _Smoothness: 0.5
-    m_Colors:
-    - _Emission: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &595289708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,7 +1378,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.062968194, w: 0.9980155}
   m_LocalPosition: {x: -0.82, y: 0.24, z: 0.12}
   m_LocalScale: {x: 0.6769844, y: 1.5276378, z: 0.4677826}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808044231}
   m_RootOrder: 0
@@ -1495,7 +1432,6 @@ Transform:
   m_LocalRotation: {x: 0.054490287, y: 0.08346724, z: -0.0000044154003, w: 0.9950197}
   m_LocalPosition: {x: 0.169, y: 0.12900001, z: -1.002}
   m_LocalScale: {x: 0.198462, y: 0.1538056, z: 0.13659346}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1649352161}
   m_RootOrder: 3
@@ -1549,7 +1485,6 @@ Transform:
   m_LocalRotation: {x: -0.0011124669, y: -0.022095311, z: 0.041694775, w: 0.99888545}
   m_LocalPosition: {x: 0.29352006, y: 0.6644674, z: -0.105149545}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 511263623}
   m_Father: {fileID: 283943014}
@@ -1582,7 +1517,6 @@ Transform:
   m_LocalRotation: {x: 0.10651815, y: 0.20852727, z: -0.026278198, w: 0.9718435}
   m_LocalPosition: {x: -0.081, y: 0.144, z: -0.985}
   m_LocalScale: {x: 0.198462, y: 0.14467901, z: 0.13659346}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1649352161}
   m_RootOrder: 5
@@ -1638,7 +1572,6 @@ Transform:
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: -1.02, y: -0.35999995, z: 0.07}
   m_LocalScale: {x: 0.26739308, y: 0.26739308, z: 0.26739308}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 160779520}
   - {fileID: 1176020571}
@@ -1723,39 +1656,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.61555535, y: 0.095185086, z: -0.12000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 331922257}
   m_Father: {fileID: 896625579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &796651692
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
-  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _Metallic: 0
-    - _Smoothness: 0.5
-    m_Colors:
-    - _Emission: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &827526169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,7 +1687,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.25, y: 6.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1748368081}
   - {fileID: 84282358}
@@ -1816,7 +1720,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.25259256, y: 0.8322217, z: 0.117777765}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 23197621}
   m_Father: {fileID: 230968720}
@@ -1849,7 +1752,6 @@ Transform:
   m_LocalRotation: {x: 0.20320252, y: -0.124091476, z: -0.06464922, w: 0.9690875}
   m_LocalPosition: {x: 0.488, y: 0.407, z: -1.019}
   m_LocalScale: {x: 0.082750715, y: 0.17854348, z: 0.08570966}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1649352161}
   m_RootOrder: 1
@@ -1903,7 +1805,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.056018673, y: 0.21000014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 796114643}
   m_Father: {fileID: 792269390}
@@ -1936,7 +1837,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.838, y: 0.569, z: -0.775}
   m_LocalScale: {x: 0.46086416, y: 0.46086416, z: 0.46086416}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1764391960}
   m_RootOrder: 2
@@ -1990,7 +1890,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.071110964, y: 0.7840741, z: 0.17740747}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 482523521}
   m_Father: {fileID: 1331341391}
@@ -2031,7 +1930,7 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 1199239255}
+  material: {fileID: 1990759164}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: ClayxelContainer
@@ -2059,7 +1958,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.1, y: -0.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 511038609}
   - {fileID: 1465875476}
@@ -2095,7 +1993,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.22999999, y: 0.913, z: -0.866}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 504366292}
   - {fileID: 220110653}
@@ -2153,7 +2050,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.504, y: 0.569, z: -0.775}
   m_LocalScale: {x: 0.46086416, y: 0.46086416, z: 0.46086416}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1764391960}
   m_RootOrder: 4
@@ -2207,7 +2103,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.21, y: 2.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792269390}
   m_RootOrder: 2
@@ -2239,7 +2134,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.45, z: 0}
   m_LocalScale: {x: 2.0936, y: 2.0936, z: 2.0936}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1764391960}
   m_RootOrder: 1
@@ -2294,7 +2188,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.52, z: 0}
   m_LocalScale: {x: 2.0936, y: 2.0936, z: 2.0936}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1764391960}
   m_RootOrder: 0
@@ -2348,38 +2241,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.7100003, y: 0.8, z: -0.36000007}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792269390}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1199239255
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
-  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _Metallic: 0
-    - _Smoothness: 0.5
-    m_Colors:
-    - _Emission: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1220684412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,7 +2280,7 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 334112504}
+  material: {fileID: 1407418674}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: ClayxelContainer
@@ -2443,7 +2308,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12, y: 0.17, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1316434419}
   - {fileID: 1484003867}
@@ -2476,7 +2340,6 @@ Transform:
   m_LocalRotation: {x: 0.00056158897, y: 0.011154022, z: -0.021048104, w: 0.9997161}
   m_LocalPosition: {x: 0.49629664, y: 0.6403704, z: -0.13000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 283943014}
   m_Father: {fileID: 482523521}
@@ -2509,7 +2372,6 @@ Transform:
   m_LocalRotation: {x: 0.17551644, y: 0.23156793, z: 0.029584248, w: 0.956397}
   m_LocalPosition: {x: -0.076, y: 0.408, z: -0.967}
   m_LocalScale: {x: 0.198462, y: 0.14472327, z: 0.13659346}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1649352161}
   m_RootOrder: 2
@@ -2613,7 +2475,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1294216239
@@ -2626,7 +2487,6 @@ Transform:
   m_LocalRotation: {x: 0.26681417, y: -0.28117335, z: 0.8827338, w: 0.26557988}
   m_LocalPosition: {x: 0.099999905, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2657,7 +2517,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.5666667, y: 0.12555562, z: 0.12000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1320930918}
   m_Father: {fileID: 1564038611}
@@ -2690,7 +2549,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.872, y: 0.57, z: -0.817}
   m_LocalScale: {x: 0.19748588, y: 0.24342169, z: 0.13606578}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1220684414}
   m_RootOrder: 0
@@ -2744,7 +2602,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.80444455, y: 0.19111092, z: 0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1853571760}
   m_Father: {fileID: 1306439325}
@@ -2776,7 +2633,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.25333333, y: 0.61074084, z: 0.09740743}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 985716988}
   m_Father: {fileID: 441392929}
@@ -2808,11 +2664,34 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.43, y: 0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2030060235}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1407418674
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
+  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Metallic: 0
+    - _Smoothness: 0.5
+    m_Colors:
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1423476208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2718,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.72518504, y: 0.34814835, z: -0.09740743}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2069825314}
   m_Father: {fileID: 1853571760}
@@ -2871,7 +2749,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.21481419, y: 0.81481546, z: -0.20888892}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 23197621}
   m_RootOrder: 0
@@ -2903,7 +2780,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.12, y: -0.12, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 390030220}
   - {fileID: 1220684414}
@@ -2961,7 +2837,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.598, y: 0.66, z: -1.097}
   m_LocalScale: {x: 0.1368043, y: 0.1368043, z: 0.1368043}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1220684414}
   m_RootOrder: 1
@@ -3015,7 +2890,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.80398136, y: 0.21000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1306439325}
   m_Father: {fileID: 2030060235}
@@ -3056,7 +2930,7 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 796651692}
+  material: {fileID: 427525874}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: ClayxelContainer
@@ -3084,7 +2958,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12, y: 0.17, z: 0.146}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2137063460}
   - {fileID: 893256734}
@@ -3122,7 +2995,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.53, y: 2.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2030060235}
   m_RootOrder: 2
@@ -3154,7 +3026,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.06296819, w: 0.9980156}
   m_LocalPosition: {x: -0.5005436, y: 0.12654734, z: 0.11}
   m_LocalScale: {x: 0.6769844, y: 1.5276378, z: 0.4677826}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 827526170}
   m_RootOrder: 0
@@ -3208,7 +3079,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.79, y: 4.55, z: 0.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2030060235}
   m_RootOrder: 3
@@ -3240,7 +3110,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12, y: 0.17, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1115274297}
   - {fileID: 1095342362}
@@ -3302,7 +3171,6 @@ Transform:
   m_LocalRotation: {x: 0.4947875, y: 0.14229484, z: 0.3874086, w: 0.7647562}
   m_LocalPosition: {x: -0.513, y: 0.45, z: -0.672}
   m_LocalScale: {x: 0.85, y: 0.85, z: 0.18271455}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1764391960}
   m_RootOrder: 5
@@ -3357,7 +3225,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.62837845, w: 0.7779079}
   m_LocalPosition: {x: 0.113, y: -0.004, z: -1.117}
   m_LocalScale: {x: 0.53144, y: 0.74307674, z: 0.3296368}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1827722660}
   m_RootOrder: 0
@@ -3411,7 +3278,6 @@ Transform:
   m_LocalRotation: {x: -0.0153017, y: -0.3039152, z: 0.5735007, w: 0.76059085}
   m_LocalPosition: {x: 2.77, y: 6.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 595289709}
   - {fileID: 2123935226}
@@ -3454,7 +3320,7 @@ MonoBehaviour:
   chunksX: 1
   chunksY: 1
   chunksZ: 1
-  material: {fileID: 528238835}
+  material: {fileID: 283083361}
   castShadows: 1
   receiveShadows: 1
   storeAssetPath: ClayxelContainer
@@ -3482,7 +3348,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.28, y: 0.448, z: 0.197}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1795113588}
   m_Father: {fileID: 1465875476}
@@ -3514,7 +3379,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.76888907, y: 0.2733335, z: 0.08000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1423476209}
   m_Father: {fileID: 1320930918}
@@ -3547,7 +3411,6 @@ Transform:
   m_LocalRotation: {x: 0.43171486, y: -0.28582785, z: -0.14356111, w: 0.8433949}
   m_LocalPosition: {x: 0.7, y: 0.45, z: -0.51}
   m_LocalScale: {x: 0.85, y: 0.85, z: 0.18271455}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1764391960}
   m_RootOrder: 3
@@ -3602,7 +3465,6 @@ Transform:
   m_LocalRotation: {x: -0.12163771, y: 0.1740979, z: 0.09135765, w: 0.972907}
   m_LocalPosition: {x: -0.662, y: 0.66, z: -0.783}
   m_LocalScale: {x: 0.7463995, y: 0.84007263, z: 0.53109044}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 390030220}
   m_RootOrder: 1
@@ -3656,7 +3518,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.10148144, y: 0.73333377, z: 0.13000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 230968720}
   m_Father: {fileID: 2062238053}
@@ -3689,7 +3550,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.139, y: 0.275, z: -1.13}
   m_LocalScale: {x: 0.9011553, y: 0.43186966, z: 0.9011553}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1764391960}
   m_RootOrder: 6
@@ -3717,6 +3577,30 @@ MonoBehaviour:
   clayObjectId: 8
   numSolids: 1
   splineSubdiv: 3
+--- !u!21 &1990759164
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
+  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Metallic: 0
+    - _Smoothness: 0.5
+    m_Colors:
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2030060234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,7 +3629,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.26, y: -0.35999995, z: 0.07}
   m_LocalScale: {x: 0.26739308, y: 0.26739308, z: 0.26739308}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1393199968}
   - {fileID: 2056283089}
@@ -3804,6 +3687,30 @@ MonoBehaviour:
   multiplierRot: 1
   mass: 500
   damping: 10
+--- !u!21 &2037367513
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clayxels/ClayxelBuiltInShaderSmoothMesh
+  m_Shader: {fileID: 4800000, guid: 968614e486952464a865156c365429e3, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Metallic: 0
+    - _Smoothness: 0.5
+    m_Colors:
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2056283088
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,7 +3737,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.71, y: 0.8, z: 0.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2030060235}
   m_RootOrder: 1
@@ -3861,7 +3767,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.4051857, y: 0.5514813, z: -0.08518517}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1949942785}
   m_Father: {fileID: 2069825314}
@@ -3893,7 +3798,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.6896291, y: 0.43037027, z: -0.17740747}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2062238053}
   m_Father: {fileID: 1423476209}
@@ -3927,7 +3831,6 @@ Transform:
   m_LocalRotation: {x: -0.7104938, y: 0.6085882, z: -0.26831943, w: 0.22983418}
   m_LocalPosition: {x: 0.61, y: -3, z: -0.29}
   m_LocalScale: {x: 1, y: 0.39133, z: 0.35176215}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 986132120}
   m_RootOrder: 2
@@ -4000,7 +3903,6 @@ Transform:
   m_LocalRotation: {x: 0.24878065, y: -0.14538696, z: 0.030024687, w: 0.9571152}
   m_LocalPosition: {x: 0.301, y: 0.406, z: -0.9904534}
   m_LocalScale: {x: 0.16668029, y: 0.20671229, z: 0.13659346}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1649352161}
   m_RootOrder: 6
@@ -4055,7 +3957,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.21312658, w: 0.9770246}
   m_LocalPosition: {x: -0.18, y: 0.16, z: 0.12}
   m_LocalScale: {x: 0.6554484, y: 1.3817412, z: 0.5166984}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808044231}
   m_RootOrder: 1
@@ -4110,7 +4011,6 @@ Transform:
   m_LocalRotation: {x: 0.26895964, y: 0.17642541, z: -0.07191872, w: 0.94412}
   m_LocalPosition: {x: 0.132, y: 0.384, z: -0.9904534}
   m_LocalScale: {x: 0.198462, y: 0.20671229, z: 0.13659346}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1649352161}
   m_RootOrder: 0
