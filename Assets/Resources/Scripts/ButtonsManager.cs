@@ -237,6 +237,32 @@ public class ButtonsManager : MonoBehaviour
 		DefineButtonData("Output-Cuboid-Cuboso-Cuboso Type 3");
 		DefineButtonData("Output-Cuboid-Cuboso-Cuboso Type 4");
 
+		DefineButtonData("Fun-Balloon--");
+		DefineButtonData("Fun-Thingy--");
+		DefineButtonData("Fun-Bleepy Blooper--");
+		DefineButtonData("Fun-Blippity Bop--");
+		DefineButtonData("Fun-Zippity Dingus--");
+		DefineButtonData("Fun-Cuboid-Cubert-");
+		DefineButtonData("Fun-Cuboid-Cuboso-");
+		DefineButtonData("Fun-Cuboid-Cuberium-");
+		DefineButtonData("Fun-Cuboid-Cuboso-Cuboso Type 1");
+		DefineButtonData("Fun-Cuboid-Cuboso-Cuboso Type 2");
+		DefineButtonData("Fun-Cuboid-Cuboso-Cuboso Type 3");
+		DefineButtonData("Fun-Cuboid-Cuboso-Cuboso Type 4");
+
+		DefineButtonData("Input-Balloon--");
+		DefineButtonData("Input-Thingy--");
+		DefineButtonData("Input-Bleepy Blooper--");
+		DefineButtonData("Input-Blippity Bop--");
+		DefineButtonData("Input-Zippity Dingus--");
+		DefineButtonData("Input-Cuboid-Cubert-");
+		DefineButtonData("Input-Cuboid-Cuboso-");
+		DefineButtonData("Input-Cuboid-Cuberium-");
+		DefineButtonData("Input-Cuboid-Cuboso-Cuboso Type 1");
+		DefineButtonData("Input-Cuboid-Cuboso-Cuboso Type 2");
+		DefineButtonData("Input-Cuboid-Cuboso-Cuboso Type 3");
+		DefineButtonData("Input-Cuboid-Cuboso-Cuboso Type 4");
+
 
 
 

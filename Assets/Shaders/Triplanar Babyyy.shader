@@ -190,7 +190,7 @@ Shader "Triplanar Babyyy"
 }
 /*ASEBEGIN
 Version=18935
-447;73;1010;483;1540.755;1157.218;3.575901;True;False
+419;73;948;483;1907.149;717.1772;2.09374;True;False
 Node;AmplifyShaderEditor.TexturePropertyNode;61;-1323.896,-805.3955;Inherit;True;Property;_BaseMap1;Base Map 1;5;0;Create;True;0;0;0;False;0;False;None;2065d9eb1ec21b745832e931bf1440a9;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.RangedFloatNode;2;-1043.658,-476.0569;Inherit;False;Property;_Tiling;Tiling;0;0;Create;True;0;0;0;False;0;False;2;1;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;3;-1230.577,-360.476;Inherit;False;Property;_Falloff;Falloff;1;0;Create;True;0;0;0;False;0;False;2;2;0;0;0;1;FLOAT;0
@@ -222,4 +222,4 @@ WireConnection;91;1;12;0
 WireConnection;91;3;38;0
 WireConnection;91;4;39;0
 ASEEND*/
-//CHKSM=AFED50E8521DBE921FB203934733182BF4968B2A
+//CHKSM=A769DA895200F025FEDD8E7B342B73FA5314CB9A
